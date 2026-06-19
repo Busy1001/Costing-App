@@ -7,7 +7,7 @@
 <title>Total Poly Print — Internal Costing App</title>
 <!--
   ──────────────────────────────────────────────────────────────────────────
-  TOTAL POLY PRINT — INTERNAL COSTING ENGINE  v10  (offline / office build)
+  TOTAL POLY PRINT — INTERNAL COSTING ENGINE  v12  (offline / office build)
   Faithful replica of ROTO_COSTING.xlsx (Sheet1), validated to ₹205.92/kg, ₹2.5363/pc.
   • 100% offline — no internet needed (uses Windows-native fonts).
   • "Save as PDF" → Domestic customer quote (hides cost & margin) or Internal copy (full).
@@ -232,6 +232,25 @@ body.hide-margin .margin-sensitive{display:none!important}
   body.print-internal .quote-sheet{font-size:9px;}
 }
 
+
+
+/* ── v12: Smart corporate workbench architecture (layout redesign, not just colors) ── */
+:root{color-scheme:light;}
+html,body{background:#eef1f5!important;}
+.ce{max-width:1440px!important;padding:18px!important;background:linear-gradient(180deg,#f7f9fc 0,#eef1f5 100%)!important;--ink:#172033;--ink-soft:#657184;--paper:#eef1f5;--card:#ffffff;--line:#dce3ee;--accent:#c44f24;--accent-soft:#fff0e8;--good:#1f7a4f;--radius:18px;--shadow:0 18px 50px rgba(23,32,51,.08);--shadow-soft:0 8px 24px rgba(23,32,51,.06);}
+.hd{background:linear-gradient(135deg,#172033,#263754);color:#fff;border-radius:24px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hd:after{content:"";position:absolute;right:-90px;top:-90px;width:230px;height:230px;border-radius:50%;background:rgba(255,255,255,.07)}.hd-mark{background:#fff;color:#172033;border-radius:16px;width:58px;height:58px}.hd-t h1{font-size:25px}.hd-t p{color:rgba(255,255,255,.76);font-size:13px}.hd-warn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);color:#fff;border-radius:999px;margin-left:auto;z-index:1}
+.appbar{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-soft);padding:10px 12px;margin-bottom:10px}.appbar .who{font-weight:700;color:var(--ink)}.appbar button,.toolbar button,.smallbtn{border-radius:12px!important;font-weight:800}.appbar button.primary,.smallbtn.primary{background:#172033!important;border-color:#172033!important}.toolbar{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-soft);padding:10px 12px;margin-bottom:12px}.toolbar button{padding:9px 16px}.toolbar .tb-label{margin-right:auto;color:var(--ink);font-weight:800}
+.qmeta{display:grid!important;grid-template-columns:2fr 1fr 1fr 1.2fr!important;gap:12px!important;background:#fff!important;border:1px solid var(--line)!important;border-radius:20px!important;box-shadow:var(--shadow-soft)!important;padding:14px!important;margin-bottom:14px!important}.qmeta label{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:6px!important;background:#f8fafc;border:1px solid #e7edf5;border-radius:14px;padding:10px 12px}.qmeta label span{font-size:10px!important;color:var(--ink-soft)!important}.qmeta input{width:100%!important;border:0!important;background:transparent!important;padding:0!important;font-size:14px!important;color:var(--ink)!important;text-align:left!important}.qmeta input:focus{box-shadow:none!important;outline:none!important}
+.app-panels{display:grid!important;grid-template-columns:1.15fr 1fr 1fr!important;gap:14px!important;margin-bottom:16px!important;align-items:stretch}.app-panel{background:#fff!important;border:1px solid var(--line)!important;border-radius:20px!important;box-shadow:var(--shadow-soft)!important;padding:16px!important}.app-panel h3{font-size:13px!important;margin-bottom:12px!important;letter-spacing:.9px!important;color:var(--ink)!important}.app-panel:nth-child(1){grid-row:span 2}.app-panel:nth-child(4){grid-column:2/4}.app-panel:nth-child(5){grid-column:1/2}.minirow{gap:8px!important;margin-bottom:9px!important;align-items:stretch!important}.minirow label{min-width:75px;display:flex;align-items:center}.minirow input,.minirow select{border-radius:12px!important;padding:10px!important;border:1px solid var(--line)!important;background:#fbfcfe!important}.preset-grid{grid-template-columns:1fr 1fr!important;gap:8px!important;margin-top:10px}.preset-grid button{border-radius:12px!important;background:#f8fafc!important;padding:11px 8px!important;text-align:left!important;font-weight:700}.charge-grid{grid-template-columns:1fr 1fr!important;gap:9px!important}.charge-grid label{background:#f8fafc!important;border:1px solid #e6edf5!important;border-radius:14px!important;padding:10px 12px!important;font-weight:700}.charge-grid input{background:#fff!important;border:1px solid var(--line)!important;border-radius:10px!important;padding:8px!important}
+.cylinder-panel{background:#fff!important;border:1px solid #f0c9b7!important;box-shadow:0 16px 38px rgba(196,79,36,.10)!important}.cylinder-ui{grid-template-columns:1fr 1fr 1.2fr!important;gap:14px!important}.cyl-input-card,.cyl-result-card{border-radius:18px!important;padding:16px!important;background:#fbfcfe!important;border:1px solid #e8eef6!important}.card-kicker{display:inline-flex!important;background:#172033!important;color:#fff!important;border-radius:999px!important;padding:4px 9px!important;font-size:10px!important;letter-spacing:.7px!important;text-transform:uppercase!important;margin-bottom:10px!important}.cyl-input-card>b,.cyl-result-card>b{font-size:15px!important;color:var(--ink)!important}.cyl-grid.simple input{border-radius:13px!important;padding:12px!important;background:#fff!important}.cyl-total{border-radius:16px!important;background:#fff8f4!important;border:1px solid #f0c9b7!important;padding:13px 14px!important}.cyl-total b{font-size:22px!important;color:#c44f24!important}.cyl-formula{font-size:12px!important;color:var(--ink-soft)!important;background:#fff!important;border:1px dashed #f0c9b7!important;border-radius:12px!important;padding:10px!important;margin-bottom:10px!important}
+.grid{display:grid!important;grid-template-columns:minmax(0,1.25fr) minmax(360px,.75fr)!important;gap:16px!important;align-items:start!important}.col-in{display:grid!important;grid-template-columns:1fr 1fr!important;gap:14px!important}.col-in .block{margin-bottom:0!important;background:#fff!important;border:1px solid var(--line)!important;border-radius:22px!important;box-shadow:var(--shadow-soft)!important;padding:18px!important}.col-in .block:nth-child(1){grid-column:1/-1;order:2}.col-in .block:nth-child(2){grid-column:1/-1;order:1;background:linear-gradient(135deg,#fff,#f7f9fc)!important}.col-in .block:nth-child(3){order:3}.col-in .block:nth-child(4){order:4}.col-in .block:nth-child(5){order:5}.col-in .block:nth-child(6){order:6}.block h2{font-size:14px!important;margin-bottom:14px!important;color:var(--ink)!important}.block h2 i{border-radius:8px;background:#172033!important;padding:4px 7px!important}.field{background:#f8fafc;border:1px solid #e7edf5;border-radius:14px;padding:10px 12px}.field input,.field select.wide{border:0!important;background:transparent!important;padding:0!important;font-size:15px!important}.field input:focus,.field select:focus{box-shadow:none!important}.layhead{background:#f8fafc;border:1px solid #e7edf5;border-radius:12px;padding:8px 9px;grid-template-columns:1fr 58px 62px 68px 52px 24px!important}.layrow{grid-template-columns:1fr 58px 62px 68px 52px 24px!important;gap:7px!important}.layrow input,.layrow select{border-radius:11px!important;padding:8px 7px!important;background:#fbfcfe!important}.add{border-radius:14px!important;background:#fbfcfe!important;padding:10px!important}.hint,.mode-note{background:#f8fafc;border:1px dashed #d9e2ef;border-radius:14px;padding:10px!important;margin-top:12px!important;color:var(--ink-soft)!important}.seg{border-radius:14px!important;overflow:hidden;border:1px solid var(--line)!important;background:#f8fafc}.seg button{padding:10px 18px!important;font-weight:800}.seg button.on{background:#172033!important;color:#fff!important}.col-out{position:sticky;top:14px}.strip{border:0!important;border-radius:22px!important;box-shadow:var(--shadow-soft);overflow:hidden;grid-template-columns:repeat(2,1fr)!important;gap:1px;background:var(--line)!important}.mini{border:0!important;background:#fff!important;padding:15px!important}.mini-l{font-size:10px!important}.mini-m{font-size:22px!important;color:#172033}.ladder,.order,.exp{border:1px solid var(--line)!important;border-radius:22px!important;overflow:hidden;box-shadow:var(--shadow-soft)!important;background:#fff!important}.ladder-h,.order-h{background:#172033!important;color:#fff!important;padding:13px 16px!important}.ladder-total{background:linear-gradient(135deg,#c44f24,#e16f3e)!important;padding:16px!important}.ladder-total strong{font-size:31px!important}.lrow,.order-row{padding:10px 16px!important}.disc{background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px!important;box-shadow:var(--shadow-soft)}.history-list{border-top:1px solid #e7edf5!important;max-height:260px!important}.hist-item{padding:10px 0!important}.hist-item button{border-radius:10px!important;padding:7px 10px!important}
+@media(max-width:1100px){.app-panels{grid-template-columns:1fr 1fr!important}.app-panel:nth-child(1),.app-panel:nth-child(4),.app-panel:nth-child(5){grid-column:auto!important;grid-row:auto!important}.grid{grid-template-columns:1fr!important}.col-out{position:static}.col-in{grid-template-columns:1fr 1fr!important}.cylinder-ui{grid-template-columns:1fr!important}}
+@media(max-width:720px){.ce{padding:10px!important}.hd{border-radius:20px;padding:16px}.hd-t h1{font-size:20px}.hd-warn{display:none}.appbar{display:grid!important;grid-template-columns:1fr 1fr;gap:8px}.appbar .who{grid-column:1/-1}.toolbar{justify-content:stretch!important;display:grid!important;grid-template-columns:1fr 1fr}.toolbar .tb-label{grid-column:1/-1}.qmeta{grid-template-columns:1fr!important}.app-panels{grid-template-columns:1fr!important}.minirow{flex-direction:column}.minirow label{min-width:0}.charge-grid{grid-template-columns:1fr!important}.grid{grid-template-columns:1fr!important}.col-in{grid-template-columns:1fr!important}.col-in .block{grid-column:auto!important}.field{align-items:flex-start!important;flex-direction:column!important}.field input,.field select.wide{width:100%!important;text-align:left!important}.layhead{display:none!important}.layrow{grid-template-columns:1fr 70px 70px!important;gap:8px!important;background:#f8fafc;border:1px solid #e7edf5;border-radius:15px;padding:10px;margin-bottom:9px}.layrow .i_rate,.layrow .gsm,.layrow .del{grid-column:auto}.layrow select{grid-column:1/-1}.layrow .gsm{align-self:center;text-align:left}.strip{grid-template-columns:1fr 1fr!important}.ladder-total{align-items:flex-start;flex-direction:column;gap:8px}.quote-top,.quote-meta-grid,.quote-price-grid,.quote-sign{grid-template-columns:1fr!important}}
+@media print{.ce{padding:0!important;background:#fff!important}.quote-sheet{font-family:Arial,Helvetica,sans-serif!important}.quote-top{border-bottom:2px solid #172033!important}.quote-badge h2{color:#172033!important}.qbox,.price-card,.quote-note{border-color:#cfd8e6!important}.price-card.primary{background:#172033!important;border-color:#172033!important}.quote-section-title{color:#172033!important}.grid,.col-in,.app-panels{display:block!important}.col-out{position:static!important}}
+
+
+.workbench-intro{display:flex;justify-content:space-between;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow-soft);padding:15px 18px;margin-bottom:14px}.workbench-intro span{font-family:var(--f-narrow);text-transform:uppercase;letter-spacing:1px;font-size:11px;color:var(--accent);font-weight:800}.workbench-intro h2{margin:3px 0 0;font-size:18px;letter-spacing:-.3px}.flow-chips{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end}.flow-chips b{font-size:11px;background:#f8fafc;border:1px solid #e7edf5;border-radius:999px;padding:7px 10px;color:var(--ink-soft)}@media(max-width:720px){.workbench-intro{align-items:flex-start;flex-direction:column}.flow-chips{justify-content:flex-start}.workbench-intro h2{font-size:16px}}
+
 </style>
 </head>
 <body>
@@ -267,6 +286,12 @@ body.hide-margin .margin-sensitive{display:none!important}
     <button id="printInt" class="alt">Internal copy</button>
   </div>
 
+  <section class="workbench-intro no-print">
+    <div><span>Corporate Costing Workbench</span><h2>Build quotation → verify costing → save customer record → print PDF</h2></div>
+    <div class="flow-chips"><b>01 Quote</b><b>02 Product</b><b>03 Cost</b><b>04 Cylinder</b><b>05 PDF</b></div>
+  </section>
+
+
   <div class="qmeta">
     <label><span>Customer</span><input class="cust" id="q_cust" list="customerList" placeholder="Customer name"><datalist id="customerList"></datalist></label>
     <label><span>Quote #</span><input class="qno" id="q_no" placeholder="0001"></label>
@@ -276,7 +301,7 @@ body.hide-margin .margin-sensitive{display:none!important}
 
   <div class="app-panels no-print">
     <div class="app-panel">
-      <h3>Customer database & presets</h3>
+      <h3>01 · Customer & Job Setup</h3>
       <div class="minirow"><label>Customer</label><input id="custName" placeholder="Customer / buyer name"><input id="custEmail" placeholder="Email / phone"></div>
       <div class="minirow"><label>Address</label><input id="custAddress" placeholder="Billing / delivery address"><button class="smallbtn" id="saveCustomerBtn">Save</button></div>
       <div class="preset-grid">
@@ -285,12 +310,12 @@ body.hide-margin .margin-sensitive{display:none!important}
       </div>
     </div>
     <div class="app-panel">
-      <h3>Raw material master</h3>
+      <h3>02 · Material Rate Master</h3>
       <div class="minirow"><label>Material</label><input id="matName" placeholder="e.g. HDPE"><input id="matDensity" type="number" step="0.01" placeholder="Density"><input id="matRate" type="number" step="1" placeholder="₹/kg"><button class="smallbtn" id="saveMatBtn">Add/update</button></div>
       <p class="muted-small">Updates the selectable material list and default density/rate for new plies. Existing ply rows remain editable.</p>
     </div>
     <div class="app-panel">
-      <h3>Extra charges, GST & cylinder costing</h3>
+      <h3>03 · Commercial Charges</h3>
       <div class="charge-grid">
         <label>Packing ₹/kg <input id="f_packingKg" type="number" step="0.5"></label>
         <label>Printing ₹/kg <input id="f_printingKg" type="number" step="0.5"></label>
@@ -302,7 +327,7 @@ body.hide-margin .margin-sensitive{display:none!important}
       </div>
     </div>
     <div class="app-panel cylinder-panel">
-      <h3>Cylinder costing — separate from pouch / roll rate</h3>
+      <h3>04 · Cylinder Costing · Separate Billing</h3>
       <div class="cylinder-ui">
         <div class="cyl-input-card">
           <span class="card-kicker">Step 1</span>
@@ -330,7 +355,7 @@ body.hide-margin .margin-sensitive{display:none!important}
     </div>
 
     <div class="app-panel">
-      <h3>Quotation history</h3>
+      <h3>05 · Saved Quotations</h3>
       <div class="minirow"><input id="quoteSearch" placeholder="Search quote/customer"><button class="smallbtn" id="refreshHistoryBtn">Search</button></div>
       <div class="history-list" id="historyList"></div>
     </div>
